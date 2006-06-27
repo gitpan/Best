@@ -3,7 +3,7 @@ package Best;
 use warnings;
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -86,15 +86,6 @@ sub import {
             package $caller;
             use $mod $loadargs;
         };
-#            my $str = qq{
-#                package $caller;
-#                use $mod $loadargs;
-#            };
-#            warn ">>>>[@args] $str";
-#            my $retval = eval $str;
-        # %INC is updated with the module even though it failed to load.
-        # This is probably a bug in Perl 5? Clear it.
-        #delete $INC{ modulize($mod) };
 
         return $retval unless $@;
         #warn $@;
@@ -176,6 +167,8 @@ under the same terms as Perl itself.
 
 =cut
 
-sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
-sub ::YY { require Carp; Carp::confess(::Y(@_)) }
+# These are my favorite debugging tools. Share and enjoy.
+#sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
+#sub ::YY { require Carp; Carp::confess(::Y(@_)) }
+
 "You'll never see me"; # End of Best

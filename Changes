@@ -1,5 +1,8 @@
 Revision history for Best
 
-0.01    2006-06-20
+0.02    2006-06-27
+        Don't shove debugging routines to main::
+
+0.01    2006-06-25
         First version, released on an unsuspecting world.
 
