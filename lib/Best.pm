@@ -3,7 +3,7 @@ package Best;
 use warnings;
 use strict;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
@@ -101,7 +101,7 @@ If you want to use B<Best> because you aren't sure your target machine has
 some modules installed, you may wonder what might warrant the assumption
 that C<Best.pm> would be available, since it isn't a core module itself.
 
-One solution is to use L<Module::Compile> to inline C<Best.pm> in your
+One solution is to use L<Module::Inline> to inline C<Best.pm> in your
 source code. If you don't know this module, check it out -- after you
 learn what it does, you may decide you don't need B<Best> at all! (If your
 fallback list includes XS modules, though, you may need to stick with us.)
@@ -114,7 +114,7 @@ fallback list includes XS modules, though, you may need to stick with us.)
 
 =item L<UNIVERSAL::require>
 
-=item L<Module::Compile>
+=item L<Module::Inline>
 
 =back
 
