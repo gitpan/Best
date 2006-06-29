@@ -3,7 +3,9 @@ package Best;
 use warnings;
 use strict;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
+
+our %WHICH;
 
 =head1 NAME
 
@@ -33,8 +35,8 @@ successful load and failing only if no alternative was found.
 
 =head1 FUNCTIONS
 
-All the functionality B<Best> provides is on the C<use> line; there are
-no callable functions as such.
+Most of the functionality B<Best> provides is on the C<use> line;
+there is only one callable functions as such (see C<which> below)
 
 If the arguments are either a simple list or a reference to a simple list,
 the elements are taken to be module names and are loaded in order with
@@ -87,12 +89,37 @@ sub import {
             use $mod $loadargs;
         };
 
-        return $retval unless $@;
-        #warn $@;
-        push @errors, $@;
+        if ($@) {
+            push @errors, $@;
+        } else {
+            $WHICH{$caller}{$modules->[0]} =
+                $WHICH{__latest}{$modules->[0]} = $mod;
+            return $retval;
+        }
     }
     die "no viable module found: $@";
     die @errors;
+}
+
+=over 4
+
+=item which
+
+In some cases--for example, class methods in OO modules--you want to
+know which module B<Best> has successfully loaded. Call C<<Best->which>>
+with the I<first> in your list of module alternatives; the return value
+is a string containing the name of the loaded module.
+
+=back
+
+=cut
+
+sub which {
+    my($class, $mod) = @_;
+    my $caller = caller;
+    return $WHICH{$caller}{$mod}  if defined $WHICH{$caller}{$mod};
+    return $WHICH{__latest}{$mod} if defined $WHICH{__latest}{$mod};
+    return;
 }
 
 =head1 DEPLOYMENT ISSUES
@@ -168,7 +195,7 @@ under the same terms as Perl itself.
 =cut
 
 # These are my favorite debugging tools. Share and enjoy.
-#sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
-#sub ::YY { require Carp; Carp::confess(::Y(@_)) }
+sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
+sub ::YY { require Carp; Carp::confess(::Y(@_)) }
 
 "You'll never see me"; # End of Best

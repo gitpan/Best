@@ -1,6 +1,6 @@
 ---
 name: Best
-version: 0.04
+version: 0.05
 author:
   - 'Gaal Yahas <gaal@forum2.org>'
 abstract: Fallbackable module loader
@@ -11,5 +11,5 @@ build_requires:
 provides:
   Best:
     file: lib/Best.pm
-    version: 0.04
+    version: 0.05
 generated_by: Module::Build version 0.26
