@@ -1,15 +1,15 @@
 ---
 name: Best
-version: 0.05
+version: 0.06
 author:
-  - 'Gaal Yahas <gaal@forum2.org>'
+  - 'Gaal Yahas, C<< <gaal at forum2.org> >>'
 abstract: Fallbackable module loader
-license: perl
+license: bsd
 build_requires:
   Test::Exception: 0
   Test::More: 0
 provides:
   Best:
     file: lib/Best.pm
-    version: 0.05
+    version: 0.06
 generated_by: Module::Build version 0.26
