@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.54.
+signed via the Module::Signature module, version 0.55.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -15,10 +15,10 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 27804595ac8727549e47a085d1f81c5b4274e54a Build.PL
-SHA1 de2d5f7ab6ebf9c63cd0f7408c23b40182b98c34 Changes
+SHA1 ae82f7a5ea12bf7f1a9f56735692eb2d49853dd4 Changes
 SHA1 b3532919fbc04c45aea78b776364b042b4b139c5 MANIFEST
 SHA1 9fa611ac19263c9269e1db89e17bfc6c024585c6 MANIFEST.SKIP
-SHA1 4ac0d3639dc13b8c8538ccd4984810ff8e1323c6 META.yml
+SHA1 b7f30a2dc7e727776f5d1b0c4fd0d12498adac61 META.yml
 SHA1 f570c730ba9ee0323219bf3375d1fd37e8dd358b Makefile.PL
 SHA1 d590756988cfd049d42042afac388b6730a68b7d README
 SHA1 e974f78178f53c88fb7e3f8d20f7df184d13e1d0 inc/Module/AutoInstall.pm
@@ -33,7 +33,7 @@ SHA1 176d68fe7c07b6ab7cfe09093078b8127bbde786 inc/Module/Install/Makefile.pm
 SHA1 8b37b38215d14f922b3d5132ce33d11d21d531ba inc/Module/Install/Metadata.pm
 SHA1 7eb44b00058c44795038d7fa4c0c77470f20a7f8 inc/Module/Install/Win32.pm
 SHA1 6d05967a5e1680b5f118315aaa6b8a1e143d79d8 inc/Module/Install/WriteAll.pm
-SHA1 a69019facfae05a4df7d7fe7ece7567edb722c4c lib/Best.pm
+SHA1 d8abc1b593d299b0fe52e30963c2b32a9559c6bc lib/Best.pm
 SHA1 2b4f22df9f996bf49412c285b1eb455837de3785 t/00-load.t
 SHA1 9dc16173d2bbedaeecb647be208a8c20ce4eef87 t/01-basic-a.t
 SHA1 b82bce27ce866b645d95291bc18668336c12c340 t/01-basic.t
@@ -46,9 +46,9 @@ SHA1 cd17cad8ecab4dfed739bc41a84f61a7447e4d1c t/LastChance.pm
 SHA1 824025eb81301602b86b82a98c2351695b86cb47 t/boilerplate.t
 SHA1 0190346d7072d458c8a10a45c19f86db641dcc48 t/pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEpgQvN2uCuGP2mw4RAlgRAJ9reY25p+cxKRDquBTzOADPu/F3VQCfQubg
-ugHBP1a4oqi8D580fQIR8qs=
-=9YWZ
+iD8DBQFE9C7jN2uCuGP2mw4RAuddAJ0fnas43ZI4BMTnHcaAd3A/Lio3UQCcCkf9
+MK/SI4CXf+T6mfvwo7Uhj5U=
+=Hqhx
 -----END PGP SIGNATURE-----
