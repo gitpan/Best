@@ -1,11 +1,14 @@
 use inc::Module::Install;
 
-name            'Best';
-all_from        'lib/Best.pm';
+# Generate our tests prior to WriteAll.
+system $^X, '-T', 'Tests.PL';
 
-perl_version '5.006';
-license 'bsd';
-build_requires 'Test::More' => 0, 'Test::Exception' => 0;
+name          ('Best');
+license       ('MIT');
+all_from      ('lib/Best.pm');
+clean_files   (qw(t/5*.t t/6*.t));
+build_requires('Test::More'      => 0,
+               'Test::Exception' => 0);
 sign;
 
 auto_install;
