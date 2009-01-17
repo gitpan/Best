@@ -5,14 +5,13 @@ use 5.006;
 use warnings;
 use strict;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 our %WHICH;
 
 # !! is more idiomatic, but messes up vim's hilighter :(
 use constant TRACE => ! ! $ENV{TRACE_BEST};
 use constant DEBUG => ! ! ($ENV{DEBUG_BEST} || $ENV{TRACE_BEST});
-
 
 =head1 NAME
 
@@ -525,7 +524,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 =cut
 
 # These are my favorite debugging tools. Share and enjoy.
-sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
-sub ::YY { require Carp; Carp::confess(::Y(@_)) }
+#sub ::Y  { require YAML::Syck; YAML::Syck::Dump(@_) }
+#sub ::YY { require Carp; Carp::confess(::Y(@_)) }
 
 "You'll never see me"; # End of Best
