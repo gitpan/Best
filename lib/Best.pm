@@ -5,7 +5,7 @@ use 5.006;
 use warnings;
 use strict;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 our %WHICH;
 
@@ -495,7 +495,7 @@ L<http://search.cpan.org/dist/Best/>
 
 =item * Source repository
 
-L<http://svn.openfoundry.org/perlbest/>
+L<https://github.com/gaal/best>
 
 =back
 
