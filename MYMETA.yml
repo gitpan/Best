@@ -8,9 +8,8 @@ build_requires:
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.59
-distribution_type: module
-dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+dynamic_config: 0
+generated_by: 'Module::Install version 1.06, CPAN::Meta::Converter version 2.113640'
 license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,11 +17,10 @@ meta-spec:
 name: Best
 no_index:
   directory:
-    - example
     - inc
     - t
 requires:
-  perl: 5.6.0
+  perl: 5.006
 resources:
   license: http://opensource.org/licenses/mit-license.php
 version: 0.15
